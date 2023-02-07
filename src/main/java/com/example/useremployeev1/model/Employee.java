@@ -16,6 +16,14 @@ public class Employee {
     private Gender gender;
     private boolean vegetarian;
 
+
+    public boolean isValidEmail() {
+        if (this.user == null) return false;
+        //String email = this.user.getEmail();
+        String[] arr = this.user.getEmail().split("@");
+        return arr[0].equals(this.getName());
+    }
+
     @OneToOne
     @JoinColumn(name = "userid", referencedColumnName = "userID")
     private User user;

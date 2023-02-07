@@ -26,7 +26,7 @@ public class InitData implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (13>4) {
             User user = new User();
-            user.setEmail("cool@nice.dk");
+            user.setEmail("Gin@nice.dk");
             user.setPassword("1234");
 
 

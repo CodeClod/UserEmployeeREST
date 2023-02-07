@@ -16,4 +16,9 @@ public class UserTest {
     void testGin() {
         assertEquals(true,employeeRepository.findByName("Gin").isPresent());
     }
+
+    @Test
+    void testvalidemail() {
+        assertEquals(true, employeeRepository.findByName("Gin").orElse(new Employee()).isValidEmail());
+    }
 }
