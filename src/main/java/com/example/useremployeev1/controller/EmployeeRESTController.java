@@ -1,0 +1,21 @@
+package com.example.useremployeev1.controller;
+
+import com.example.useremployeev1.model.Employee;
+import com.example.useremployeev1.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class EmployeeRESTController {
+
+    @Autowired
+    EmployeeRepository employeeRepository;
+
+    @GetMapping("/Employees")
+    public List<Employee> getusers() {
+        return employeeRepository.findAll();
+    }
+}
